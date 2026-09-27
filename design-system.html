@@ -78,88 +78,50 @@
       color: var(--color-accent);
     }
 
+    /* Color palette */
     .color-palette {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: var(--spacing-sm);
-      margin-bottom: var(--spacing-md);
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-lg);
     }
 
     .color-swatch {
-      padding: var(--spacing-md) var(--spacing-sm);
+      padding: var(--spacing-md);
       border-radius: var(--radius-md);
-      border: 1px solid var(--color-primary);   
-      min-height: 150px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      gap: 2px;
+      text-align: center;
     }
 
-    .color-swatch strong {
-      font-weight: 700;
-    }
-
-    .color-swatch code {
-      font-size: 0.9rem;
-    }
-
-    .contrast-table {
+    /* Contrast table */
+    table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.95rem;
     }
 
-    .contrast-table th,
-    .contrast-table td {
+    th, td {
       text-align: left;
-      padding: var(--spacing-xs) var(--spacing-sm);
+      padding: var(--spacing-sm);
       border-bottom: 1px solid var(--color-primary);
     }
 
-    .contrast-table th {
-      font-weight: 700;
-    }
-
-    .pair {
-      display: inline-block;
-      padding: 2px 10px;
-      border-radius: var(--radius-sm);
-      font-weight: 600;
-    }
-
-    .component-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--spacing-sm);
-      align-items: center;
-      margin-bottom: var(--spacing-sm);
-    }
-
+    /* Buttons: red normally, maroon and lifted on hover, orange ring on focus */
     .button {
       display: inline-block;
-      font-weight: 700;
-      padding: var(--spacing-xs) var(--spacing-md);
+      padding: var(--spacing-sm) var(--spacing-md);
       background-color: var(--color-secondary);
       color: var(--color-highlight);
       text-decoration: none;
       border: 2px solid var(--color-secondary);
       border-radius: var(--radius-sm);
       cursor: pointer;
-      transition: background-color 0.2s ease, border-color 0.2s ease,
-                  transform 0.2s ease, box-shadow 0.2s ease;
+      transition: background-color 0.2s, transform 0.2s;
     }
 
     .button:hover {
       background-color: var(--color-primary);
       border-color: var(--color-primary);
       transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(17, 21, 28, 0.25);
-    }
-
-    .button:active {
-      transform: translateY(0);
-      box-shadow: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
     }
 
     .button:focus-visible {
@@ -167,74 +129,31 @@
       outline-offset: 3px;
     }
 
-    .button--secondary {
-      background-color: transparent;
-      color: var(--color-primary);
-      border-color: var(--color-primary);
-    }
-
-    .button--secondary:hover {
-      background-color: var(--color-primary);
-      color: var(--color-highlight);
-    }
-
+    /* Links: always underlined, maroon on hover and after visiting */
     .link {
       color: var(--color-secondary);
       text-decoration: underline;
-      text-decoration-thickness: 2px;
-      text-underline-offset: 3px;
-      transition: color 0.2s ease, text-decoration-color 0.2s ease;
     }
 
     .link:hover {
       color: var(--color-primary);
-      text-decoration-color: var(--color-accent);
     }
 
     .link:visited {
       color: var(--color-primary);
     }
 
-    .link:focus-visible {
-      outline: 3px solid var(--color-accent);
-      outline-offset: 2px;
-      border-radius: 2px;
-    }
-
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: var(--spacing-xs);
-      min-width: 240px;
-    }
-
-    .field label {
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .input {
+    /* Form inputs */
+    input, select {
       font: inherit;
-      padding: var(--spacing-xs) var(--spacing-sm);
+      padding: var(--spacing-sm);
       border: 2px solid var(--color-primary);
       border-radius: var(--radius-sm);
-      background-color: #FFFFFF;
-      color: var(--color-neutral);
     }
 
-    .input:hover {
-      border-color: var(--color-secondary);
-    }
-
-    .input:focus-visible {
+    input:focus-visible, select:focus-visible {
       outline: 3px solid var(--color-accent);
       outline-offset: 2px;
-      border-color: var(--color-secondary);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .button, .link, .input { transition: none; }
-      .button:hover { transform: none; }
     }
 
     footer {
@@ -258,81 +177,76 @@
       <div class="color-palette">
         <div class="color-swatch" style="background-color: var(--color-primary); color: var(--color-highlight);">
           <strong>Primary</strong>
-          <code>#450920</code>
-          <small>15.6:1 on Highlight</small>
+          <p>#450920</p>
+          <small>Contrast on off-white: 15.6:1</small>
         </div>
         <div class="color-swatch" style="background-color: var(--color-secondary); color: var(--color-highlight);">
           <strong>Secondary</strong>
-          <code>#D90429</code>
-          <small>5.1:1 with Highlight text</small>
+          <p>#D90429</p>
+          <small>Contrast with off-white text: 5.1:1</small>
         </div>
         <div class="color-swatch" style="background-color: var(--color-accent); color: var(--color-neutral);">
           <strong>Accent</strong>
-          <code>#CD6A13</code>
-          <small>4.9:1 with Neutral text</small>
+          <p>#CD6A13</p>
+          <small>Contrast with near-black text: 4.9:1</small>
         </div>
         <div class="color-swatch" style="background-color: var(--color-neutral); color: var(--color-highlight);">
           <strong>Neutral</strong>
-          <code>#11151C</code>
-          <small>17.8:1 on Highlight</small>
+          <p>#11151C</p>
+          <small>Contrast on off-white: 17.8:1</small>
         </div>
-        <div class="color-swatch" style="background-color: var(--color-highlight); color: var(--color-neutral);">
+        <div class="color-swatch" style="background-color: var(--color-highlight); color: var(--color-neutral); border: 1px solid #450920;">
           <strong>Highlight</strong>
-          <code>#FFFBFA</code>
+          <p>#FFFBFA</p>
           <small>Page background</small>
         </div>
       </div>
 
-      <h3>Approved text / background pairs</h3>
-      <table class="contrast-table">
-        <thead>
-          <tr>
-            <th scope="col">Pair</th>
-            <th scope="col">Ratio</th>
-            <th scope="col">WCAG</th>
-            <th scope="col">Used for</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="pair" style="background-color: #FFFBFA; color: #450920; border: 1px solid #450920;">Primary on Highlight</span></td>
-            <td>15.6:1</td>
-            <td class="pass">AAA</td>
-            <td>Headings</td>
-          </tr>
-          <tr>
-            <td><span class="pair" style="background-color: #FFFBFA; color: #11151C; border: 1px solid #450920;">Neutral on Highlight</span></td>
-            <td>17.8:1</td>
-            <td class="pass">AAA</td>
-            <td>Body text</td>
-          </tr>
-          <tr>
-            <td><span class="pair" style="background-color: #D90429; color: #FFFBFA;">Highlight on Secondary</span></td>
-            <td>5.1:1</td>
-            <td class="pass">AA</td>
-            <td>Button labels</td>
-          </tr>
-          <tr>
-            <td><span class="pair" style="background-color: #11151C; color: #CD6A13;">Accent on Neutral</span></td>
-            <td>4.9:1</td>
-            <td class="pass">AA</td>
-            <td>Accent text on dark surfaces</td>
-          </tr>
-          <tr>
-            <td><span class="pair" style="background-color: #FFFBFA; color: #CD6A13; border: 1px solid #450920;">Accent on Highlight</span></td>
-            <td>3.6:1</td>
-            <td class="large">AA large only</td>
-            <td>Borders, focus ring, large labels</td>
-          </tr>
-          <tr>
-            <td><span class="pair" style="background-color: #11151C; color: #D90429;">Secondary on Neutral</span></td>
-            <td>3.5:1</td>
-            <td class="large">AA large only</td>
-            <td>Large headings on dark surfaces</td>
-          </tr>
-        </tbody>
+      <h3>Contrast Ratios</h3>
+      <table>
+        <tr>
+          <th>Text on background</th>
+          <th>Ratio</th>
+          <th>WCAG</th>
+          <th>Used for</th>
+        </tr>
+        <tr>
+          <td>Primary on Highlight</td>
+          <td>15.6:1</td>
+          <td>AAA</td>
+          <td>Headings</td>
+        </tr>
+        <tr>
+          <td>Neutral on Highlight</td>
+          <td>17.8:1</td>
+          <td>AAA</td>
+          <td>Body text</td>
+        </tr>
+        <tr>
+          <td>Highlight on Secondary</td>
+          <td>5.1:1</td>
+          <td>AA</td>
+          <td>Button text</td>
+        </tr>
+        <tr>
+          <td>Accent on Neutral</td>
+          <td>4.9:1</td>
+          <td>AA</td>
+          <td>Accent text on dark</td>
+        </tr>
+        <tr>
+          <td>Accent on Highlight</td>
+          <td>3.6:1</td>
+          <td>AA (large text only)</td>
+          <td>Borders, focus ring, large labels</td>
+        </tr>
+        <tr>
+          <td>Secondary on Neutral</td>
+          <td>3.5:1</td>
+          <td>AA (large text only)</td>
+          <td>Large headings on dark</td>
+        </tr>
       </table>
-      <small>Not used together: Primary on Neutral (1.1:1) and Accent on Secondary (1.4:1).</small>
     </section>
 
     <section>
@@ -352,36 +266,32 @@
       <h2>Interactive Components</h2>
 
       <h3>Buttons</h3>
-      <div class="component-row">
-        <a href="#top" class="button">Primary Button</a>
-        <a href="#top" class="button button--secondary">Secondary Button</a>
+      <p>
+        <a href="#" class="button">Primary Button</a>
         <button type="button" class="button">Button Element</button>
-      </div>
-      <small>Hover: red to maroon, 2px lift, soft shadow. Focus: 3px orange ring. Active: drops back down.</small>
+      </p>
+      <small>Hover turns the button maroon and lifts it. Tab to it to see the orange focus ring.</small>
 
       <h3>Links</h3>
-      <div class="component-row">
-        <a href="https://sites.google.com/view/btu-lab/home" class="link">Standard link</a>
-        <a href="" class="link">Visited link</a>
-      </div>
-      <small>Links are always underlined so color is never the only cue. Visited links turn maroon. The visited example points at this page, so it renders in the visited state.</small>
+      <p>
+        <a href="https://sites.google.com/view/btu-lab/home" class="link">Standard Link</a>
+        <a href="" class="link">Visited Link</a>
+      </p>
+      <small>The visited example links to this page, so it shows the visited color.</small>
 
       <h3>Form Inputs</h3>
-      <div class="component-row">
-        <div class="field">
-          <label for="demo-email">Email</label>
-          <input class="input" id="demo-email" type="email" placeholder="you@colorado.edu">
-        </div>
-        <div class="field">
-          <label for="demo-area">Lab area</label>
-          <select class="input" id="demo-area">
-            <option>Lasers</option>
-            <option>Wood Shop</option>
-            <option>3D Printers</option>
-          </select>
-        </div>
-      </div>
-      <small>Press Tab to move through the page and see the orange focus ring on every interactive element.</small>
+      <p>
+        <label for="email">Email</label>
+        <input id="email" type="email">
+      </p>
+      <p>
+        <label for="area">Lab area</label>
+        <select id="area">
+          <option>Lasers</option>
+          <option>Wood Shop</option>
+          <option>3D Printers</option>
+        </select>
+      </p>
     </section>
 
     <footer>
