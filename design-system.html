@@ -4,55 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BTU Lab Design System</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Roboto+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/bkg4vbg.css">
   <style>
-    /* ==========================================================
-       BTU LAB DESIGN SYSTEM
-       Theme: heat, combustion, char. Light page; maroon, red,
-       and orange on an off-white ground. Based on the ATLS 2200
-       WA6 template.
-       ========================================================== */
-
-    /* ---------- Design tokens (shared; agreed by both partners) ---------- */
     :root {
-      /* Color Palette - 5 core colors, Role based
-      --color-primary:   #450920; /* Maroon: brand, headings, dark surfaces (15.6:1 on Highlight) */
-      --color-secondary: #D90429; /* Red: action color for buttons (5.1:1 with Highlight text) */
-      --color-accent:    #CD6A13; /* Orange: borders, focus ring, large text only (3.6:1 on Highlight) */
-      --color-neutral:   #11151C; /* Near-black: body text (17.8:1 on Highlight) */
-      --color-highlight: #FFFBFA; /* Off-white: page background, text on dark colors */
+      --color-primary:   #450920;
+      --color-secondary: #D90429;
+      --color-accent:    #CD6A13;
+      --color-neutral:   #11151C;
+      --color-highlight: #FFFBFA;
 
-      /* Typography
-      --font-primary: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-secondary: 'Roboto Mono', monospace;
-
-      /* Spacing System 
       --spacing-xs: 0.25rem;
       --spacing-sm: 0.5rem;
       --spacing-md: 1rem;
       --spacing-lg: 1.5rem;
       --spacing-xl: 2rem;
 
-      /* Border Radius */
       --radius-sm: 4px;
       --radius-md: 8px;
       --radius-lg: 12px;
     }
 
-    /* ---------- Reset and base ---------- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    p {
+      font-family: helvetica-lt-pro, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 1.6;
+      color: var(--color-neutral);
     }
 
-    body {
-      font-family: var(--font-primary);
+    small {
+      font-family: helvetica-lt-pro, sans-serif;
+      font-weight: 400;
+      font-style: normal;
       line-height: 1.6;
-      background-color: var(--color-highlight);
-      color: var(--color-neutral);
-      padding: var(--spacing-xl) var(--spacing-md);
+      font-size: 0.75rem;
     }
+
 
     .container {
       max-width: 1100px;
@@ -65,37 +52,32 @@
 
     
     h1 {
-      font-size: 3rem;
+      font-family: heading-normal, sans-serif;
       font-weight: 700;
+      font-style: normal;
+      font-size: 3rem;
       margin-bottom: var(--spacing-md);
       color: var(--color-primary);
     }
 
     h2 {
+      font-family: heading-normal, sans-serif;
+      font-weight: 400;
+      font-style: normal;
       font-size: 2rem;
-      font-weight: 600;
       margin-bottom: var(--spacing-md);
       color: var(--color-secondary);
     }
 
     h3 {
+      font-family: heading-seminarrow, sans-serif;
+      font-weight: 400;
+      font-style: normal;
       font-size: 1.5rem;
-      font-weight: 500;
       margin-bottom: var(--spacing-sm);
       color: var(--color-accent);
     }
 
-    .body-text {
-      font-size: 1rem;
-      margin-bottom: var(--spacing-md);
-    }
-
-    .small-text {
-      font-size: 0.75rem;
-      color: var(--color-neutral);
-    }
-
-    /* ---------- Color Palette ---------- */
     .color-palette {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -122,7 +104,6 @@
       font-size: 0.9rem;
     }
 
-    /* Contrast table: */
     .contrast-table {
       width: 100%;
       border-collapse: collapse;
@@ -147,23 +128,6 @@
       font-weight: 600;
     }
 
-    .pass  { font-weight: 600; }
-    .large { font-weight: 600; color: var(--color-accent); }
-
-    /* ---------- Spacing System -------- */
-    .spacing-demo {
-      display: flex;
-      align-items: center;
-      gap: var(--spacing-sm);
-      margin-bottom: var(--spacing-md);
-    }
-
-    .spacing-block {
-      background-color: var(--color-primary);
-      height: 50px;
-    }
-
-    /* ---------- Interactive Components ---------- */
     .component-row {
       display: flex;
       flex-wrap: wrap;
@@ -172,7 +136,6 @@
       margin-bottom: var(--spacing-sm);
     }
 
-    /* Buttons: red at rest, maroon + lift on hover, orange focus*/
     .button {
       display: inline-block;
       font-weight: 700;
@@ -188,9 +151,9 @@
     }
 
     .button:hover {
-      background-color: var(--color-primary);   /* color swap: red -> maroon */
+      background-color: var(--color-primary);
       border-color: var(--color-primary);
-      transform: translateY(-2px);              /* subtle lift */
+      transform: translateY(-2px);
       box-shadow: 0 4px 10px rgba(17, 21, 28, 0.25);
     }
 
@@ -204,7 +167,6 @@
       outline-offset: 3px;
     }
 
-    /* Secondary variant: outlined, maroon on hover */
     .button--secondary {
       background-color: transparent;
       color: var(--color-primary);
@@ -216,7 +178,6 @@
       color: var(--color-highlight);
     }
 
-    /* Links: always underlined */
     .link {
       color: var(--color-secondary);
       text-decoration: underline;
@@ -240,7 +201,6 @@
       border-radius: 2px;
     }
 
-    /* Form inputs */
     .field {
       display: flex;
       flex-direction: column;
@@ -272,13 +232,11 @@
       border-color: var(--color-secondary);
     }
 
-    /* Respect users who turn off motion */
     @media (prefers-reduced-motion: reduce) {
       .button, .link, .input { transition: none; }
       .button:hover { transform: none; }
     }
 
-    /* ---------- Footer ---------- */
     footer {
       border-top: 2px solid var(--color-primary);
       padding-top: var(--spacing-sm);
@@ -291,11 +249,10 @@
 
     <header>
       <h1>BTU Lab Design System</h1>
-      <p class="body-text">Colors, type, spacing, and components for the BTU Lab website redesign. Built around heat, combustion, and char: maroon, red, and orange on an off-white ground.</p>
-      <p class="small-text"><a class="link" href="index.html">Back to the BTU Lab redesign</a></p>
+      <p>Colors, type, spacing, and components for the BTU Lab website redesign. Built around heat, combustion, and char: maroon, red, and orange on an off-white ground.</p>
+      <small><a class="link" href="index.html">Back to the BTU Lab redesign</a></small>
     </header>
 
-    <!-- ===================== COLOR PALETTE ===================== -->
     <section>
       <h2>Color Palette</h2>
       <div class="color-palette">
@@ -375,33 +332,22 @@
           </tr>
         </tbody>
       </table>
-      <p class="small-text">Not used together: Primary on Neutral (1.1:1) and Accent on Secondary (1.4:1).</p>
+      <small>Not used together: Primary on Neutral (1.1:1) and Accent on Secondary (1.4:1).</small>
     </section>
 
-    <!-- ===================== TYPOGRAPHY ===================== -->
     <section>
       <h2>Typography</h2>
-      <h1>Heading 1 - Space Grotesk</h1>
-      <h2>Heading 2 - Space Grotesk</h2>
-      <h3>Heading 3 - Space Grotesk</h3>
-      <p class="body-text">Body Text - Using Space Grotesk with a comfortable line height and readable size.</p>
-      <p class="small-text">Small Text - Subtle and understated, perfect for annotations and footnotes.</p>
+      <h1>Heading 1 - Heading Normal Bold</h1>
+      <h2>Heading 2 - Heading Normal</h2>
+      <h3>Heading 3 - Heading Narrow</h3>
+      <p>Body Text - Helvetica Roman.</p>
+      <small>Small Text - Helvetica Roman.</small>
     </section>
 
-    <!-- ===================== SPACING  ===================== -->
     <section>
       <h2>Spacing System</h2>
-      <div class="spacing-demo">
-        <div class="spacing-block" style="width: var(--spacing-xs);"></div>
-        <div class="spacing-block" style="width: var(--spacing-sm);"></div>
-        <div class="spacing-block" style="width: var(--spacing-md);"></div>
-        <div class="spacing-block" style="width: var(--spacing-lg);"></div>
-        <div class="spacing-block" style="width: var(--spacing-xl);"></div>
-      </div>
-      <p>Spacing blocks demonstrating size variations from xs to xl</p>
     </section>
 
-    <!-- ===================== INTERACTIVE COMPONENTS ===================== -->
     <section>
       <h2>Interactive Components</h2>
 
@@ -411,14 +357,14 @@
         <a href="#top" class="button button--secondary">Secondary Button</a>
         <button type="button" class="button">Button Element</button>
       </div>
-      <p class="small-text">Hover: red to maroon, 2px lift, soft shadow. Focus: 3px orange ring. Active: drops back down.</p>
+      <small>Hover: red to maroon, 2px lift, soft shadow. Focus: 3px orange ring. Active: drops back down.</small>
 
       <h3>Links</h3>
       <div class="component-row">
         <a href="https://sites.google.com/view/btu-lab/home" class="link">Standard link</a>
         <a href="" class="link">Visited link</a>
       </div>
-      <p class="small-text">Links are always underlined so color is never the only cue. Visited links turn maroon. The visited example points at this page, so it renders in the visited state.</p>
+      <small>Links are always underlined so color is never the only cue. Visited links turn maroon. The visited example points at this page, so it renders in the visited state.</small>
 
       <h3>Form Inputs</h3>
       <div class="component-row">
@@ -435,11 +381,11 @@
           </select>
         </div>
       </div>
-      <p class="small-text">Press Tab to move through the page and see the orange focus ring on every interactive element.</p>
+      <small>Press Tab to move through the page and see the orange focus ring on every interactive element.</small>
     </section>
 
     <footer>
-      <p>Design system for a student class project redesigning the BTU Lab website for a CU Boulder course. This is not the lab's official site.</p>
+      <p>This site is a student class project redesigning the BTU Lab website for a CU Boulder course. It is not the lab's official site. The official site is at <a href="https://sites.google.com/view/btu-lab/home">sites.google.com/view/btu-lab</a></p>
     </footer>
 
   </div>
