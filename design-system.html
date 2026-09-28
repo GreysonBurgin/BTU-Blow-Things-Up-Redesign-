@@ -24,6 +24,11 @@
       --radius-lg: 12px;
     }
 
+    * {
+      font-family: helvetica-lt-pro, sans-serif;
+      color: var(--color-neutral);
+    }
+
     p {
       font-family: helvetica-lt-pro, sans-serif;
       font-weight: 400;
@@ -39,17 +44,6 @@
       line-height: 1.6;
       font-size: 0.75rem;
     }
-
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    section {
-      margin-bottom: var(--spacing-xl);
-    }
-
     
     h1 {
       font-family: heading-normal, sans-serif;
@@ -78,7 +72,6 @@
       color: var(--color-accent);
     }
 
-    /* Color palette */
     .color-palette {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -175,30 +168,25 @@
     <section>
       <h2>Color Palette</h2>
       <div class="color-palette">
-        <div class="color-swatch" style="background-color: var(--color-primary); color: var(--color-highlight);">
-          <strong>Primary</strong>
-          <p>#450920</p>
-          <small>Contrast on off-white: 15.6:1</small>
+        <div class="color-swatch" style="background-color: var(--color-primary);">
+          <strong style="color: var(--color-highlight);">Primary</strong>
+          <p style="color: var(--color-highlight);">#450920</p>
         </div>
-        <div class="color-swatch" style="background-color: var(--color-secondary); color: var(--color-highlight);">
-          <strong>Secondary</strong>
+        <div class="color-swatch" style="background-color: var(--color-secondary);">
+          <strong style="color: var(--color-highlight);">Secondary</strong>
           <p>#D90429</p>
-          <small>Contrast with off-white text: 5.1:1</small>
         </div>
-        <div class="color-swatch" style="background-color: var(--color-accent); color: var(--color-neutral);">
-          <strong>Accent</strong>
+        <div class="color-swatch" style="background-color: var(--color-accent);">
+          <strong style="color: var(--color-highlight);">Accent</strong>
           <p>#CD6A13</p>
-          <small>Contrast with near-black text: 4.9:1</small>
         </div>
-        <div class="color-swatch" style="background-color: var(--color-neutral); color: var(--color-highlight);">
-          <strong>Neutral</strong>
-          <p>#11151C</p>
-          <small>Contrast on off-white: 17.8:1</small>
+        <div class="color-swatch" style="background-color: var(--color-neutral);">
+          <strong style="color: var(--color-highlight);">Neutral</strong>
+          <p style="color: var(--color-highlight);">#11151C</p>
         </div>
-        <div class="color-swatch" style="background-color: var(--color-highlight); color: var(--color-neutral); border: 1px solid #450920;">
+        <div class="color-swatch" style="background-color: var(--color-highlight); border: 1px solid #450920;">
           <strong>Highlight</strong>
           <p>#FFFBFA</p>
-          <small>Page background</small>
         </div>
       </div>
 
@@ -211,7 +199,7 @@
           <th>Used for</th>
         </tr>
         <tr>
-          <td>Primary on Highlight</td>
+          <td style="color: var(--color-primary);">Primary on Highlight</td>
           <td>15.6:1</td>
           <td>AAA</td>
           <td>Headings</td>
@@ -223,25 +211,25 @@
           <td>Body text</td>
         </tr>
         <tr>
-          <td>Highlight on Secondary</td>
+          <td style="color: var(--color-highlight); background-color: var(--color-secondary);">Highlight on Secondary</td>
           <td>5.1:1</td>
           <td>AA</td>
           <td>Button text</td>
         </tr>
         <tr>
-          <td>Accent on Neutral</td>
+          <td style="color: var(--color-accent); background-color: var(--color-neutral);">Accent on Neutral</td>
           <td>4.9:1</td>
           <td>AA</td>
           <td>Accent text on dark</td>
         </tr>
         <tr>
-          <td>Accent on Highlight</td>
+          <td style="color: var(--color-accent);">Accent on Highlight</td>
           <td>3.6:1</td>
           <td>AA (large text only)</td>
           <td>Borders, focus ring, large labels</td>
         </tr>
         <tr>
-          <td>Secondary on Neutral</td>
+          <td style="color: var(--color-secondary); background-color: var(--color-neutral);">Secondary on Neutral</td>
           <td>3.5:1</td>
           <td>AA (large text only)</td>
           <td>Large headings on dark</td>
@@ -260,6 +248,11 @@
 
     <section>
       <h2>Spacing System</h2>
+      <p style="margin-bottom: var(--spacing-xl);">Extra Wide Spacing - 2rem</p>
+      <p style="margin-bottom: var(--spacing-lg);">Wide Spacing - 1.5rem</p>
+      <p style="margin-bottom: var(--spacing-md);">Medium Spacing - 1rem</p>
+      <p style="margin-bottom: var(--spacing-sm);">Small Spacing - 0.5rem</p>
+      <p style="margin-bottom: var(--spacing-xs);">Extra Small Spacing - 0.25rem</p>
     </section>
 
     <section>
