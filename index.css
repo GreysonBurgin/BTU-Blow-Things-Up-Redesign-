@@ -146,3 +146,182 @@
       padding-top: var(--spacing-sm);
       font-size: 0.8rem;
     }
+
+    .calendar-section {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.calendar-section h2 {
+  margin-bottom: 1rem;
+  color: #172033;
+}
+
+.calendar-container {
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 8%);
+}
+
+.calendar-container iframe {
+  display: block;
+  width: 100%;
+  height: 650px;
+  border: 0;
+}
+
+@media (max-width: 600px) {
+  .calendar-container iframe {
+    height: 500px;
+  }
+}
+
+/* Header bar */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: #11151C;
+  color: #D90429;
+  font-family: Arial, sans-serif;
+}
+
+header > p {
+  margin: 0;
+}
+
+header > p > a {
+  color: #D90429;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Remove default list formatting */
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Top-level navigation */
+header nav > ul {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+header nav > ul > li {
+  position: relative;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  color: #D90429;
+}
+
+header nav a {
+  display: block;
+  color:#D90429;
+  text-decoration: none;
+}
+
+header nav > ul > li:hover,
+header nav > ul > li:focus-within {
+  background: #11151C;
+}
+
+/* Dropdown lists */
+header nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  width: max-content;
+  min-width: 220px;
+  max-width: calc(100vw - 2rem);
+  padding: 0.4rem;
+  border-radius: 6px;
+  background: #11151C;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 20%);
+}
+
+/* Show dropdown on hover or when a link inside has focus */
+header nav li:hover > ul,
+header nav li:focus-within > ul {
+  display: block;
+}
+
+header nav ul ul a {
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+}
+
+header nav ul ul a:hover,
+header nav a[aria-current="page"] {
+  background: #11151C;
+}
+
+header a:focus-visible {
+  outline: 2px solid #CD6A13;
+  outline-offset: 3px;
+}
+
+/* Align the final dropdown with the right edge */
+header nav > ul > li:last-child > ul {
+  left: auto;
+  right: 0;
+}
+
+/* Small screens: stack navigation and show submenu links */
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+  }
+
+  header nav > ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  header nav ul ul {
+    display: block;
+    position: static;
+    width: auto;
+    min-width: 0;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    border-left: 2px solid #11151C;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+iframe[src*="docs.google.com/forms"] {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: 900px;
+  margin: 2rem auto;
+  border: 0;
+}
+
+header > p > a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+header > p > a > img {
+  display: block;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
