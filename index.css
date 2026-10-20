@@ -325,3 +325,36 @@ header > p > a > img {
   height: 44px;
   object-fit: contain;
 }
+
+/* Page hero: photo banner behind the page title.
+   The image is set on the div in the HTML; dark photos add "dark"
+   so the title switches to the light color. */
+.page-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  margin-bottom: var(--spacing-xl);
+  background-size: cover;
+  background-position: center;
+}
+
+.page-hero h1 {
+  margin: 0;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.page-hero.dark h1 {
+  color: var(--color-highlight);
+}
+
+@media (max-width: 700px) {
+  .page-hero {
+    min-height: 200px;
+  }
+
+  .page-hero h1 {
+    font-size: 2.5rem;
+  }
+}
