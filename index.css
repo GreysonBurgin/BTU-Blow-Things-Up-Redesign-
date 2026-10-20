@@ -77,7 +77,6 @@
       text-align: center;
     }
 
-    /* Contrast table */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -89,7 +88,6 @@
       border-bottom: 1px solid var(--color-primary);
     }
 
-    /* Buttons: red normally, maroon and lifted on hover, orange ring on focus */
     .button {
       display: inline-block;
       padding: var(--spacing-sm) var(--spacing-md);
@@ -114,7 +112,6 @@
       outline-offset: 3px;
     }
 
-    /* Links: always underlined, maroon on hover and after visiting */
     .link {
       color: var(--color-secondary);
       text-decoration: underline;
@@ -128,7 +125,6 @@
       color: var(--color-primary);
     }
 
-    /* Form inputs */
     input, select {
       font: inherit;
       padding: var(--spacing-sm);
@@ -180,7 +176,6 @@
   }
 }
 
-/* Header bar */
 header {
   display: flex;
   align-items: center;
@@ -203,14 +198,12 @@ header > p > a {
   font-weight: bold;
 }
 
-/* Remove default list formatting */
 header nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* Top-level navigation */
 header nav > ul {
   display: flex;
   align-items: center;
@@ -235,7 +228,6 @@ header nav > ul > li:focus-within {
   background: #11151C;
 }
 
-/* Dropdown lists */
 header nav ul ul {
   display: none;
   position: absolute;
@@ -251,7 +243,6 @@ header nav ul ul {
   box-shadow: 0 8px 24px rgb(0 0 0 / 20%);
 }
 
-/* Show dropdown on hover or when a link inside has focus */
 header nav li:hover > ul,
 header nav li:focus-within > ul {
   display: block;
@@ -272,13 +263,11 @@ header a:focus-visible {
   outline-offset: 3px;
 }
 
-/* Align the final dropdown with the right edge */
 header nav > ul > li:last-child > ul {
   left: auto;
   right: 0;
 }
 
-/* Small screens: stack navigation and show submenu links */
 @media (max-width: 700px) {
   header {
     flex-direction: column;
@@ -326,9 +315,6 @@ header > p > a > img {
   object-fit: contain;
 }
 
-/* Page hero: photo banner behind the page title.
-   The image is set on the div in the HTML; dark photos add "dark"
-   so the title switches to the light color. */
 .page-hero {
   display: flex;
   align-items: center;
