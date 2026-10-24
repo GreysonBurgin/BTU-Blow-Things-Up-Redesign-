@@ -326,9 +326,11 @@ header > p > a > img {
 }
 
 .page-hero h1 {
-  margin: 0;
-  font-size: 4rem;
-  text-align: center;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 }
 
 .page-hero.dark h1 {
@@ -342,5 +344,66 @@ header > p > a > img {
 
   .page-hero h1 {
     font-size: 2.5rem;
+  }
+}
+
+.home-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  margin-bottom: var(--spacing-xl);
+}
+
+.feature-image {
+  float: right;
+  width: 30%;
+  margin-left: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+footer {
+  clear: both;
+}
+
+@media (max-width: 700px) {
+  .feature-image {
+    float: none;
+    display: block;
+    width: 70%;
+    margin: 0 auto var(--spacing-lg);
+  }
+}
+
+.background-section {
+  padding: var(--spacing-xl);
+  background-image: url('images/tool-wall.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.background-section h2 {
+  text-align: center;
+  padding: var(--spacing-sm);
+  background-color: var(--color-highlight);
+  color: #15803D;
+}
+
+.background-section ul {
+  columns: 3;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 2;
+}
+
+.tools-green {
+  color: #15803D;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .background-section ul {
+    columns: 2;
+    font-size: 1rem;
   }
 }
