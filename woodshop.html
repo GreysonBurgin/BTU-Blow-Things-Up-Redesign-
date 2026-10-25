@@ -52,7 +52,7 @@
       <h1>Wood Shop</h1>
     </div>
     <img class="feature-image" src="images/sawstop.jpg" alt="SawStop table saw">
-    <p>The WOOD SHOP entrance is marked PINK. Inside, tools have their own color-coding system. You'll figure it out.</p>
+    <h1 style="color: #cf42c1;">The WOOD SHOP entrance is marked PINK. Inside, tools have their own color-coding system. You'll figure it out.</h1>
     <section>
       <h2>Wood Shop Orientations</h2>
       <p>Access to certain machines is facilitated by BTU “Mischief Makers". Anyone can become a "Mischief Maker" on any machine.</p>
@@ -62,20 +62,20 @@
     </section>
     <section>
       <h2>Wood Shop Equipment</h2>
-      <ul>
-        <li>Table Saw</li>
-        <li>Band Saw</li>
-        <li>Drill Press</li>
-        <li>Chop Saw</li>
-        <li>Belt Sander</li>
-        <li>Random Orbit Sander</li>
-        <li>Palm Router</li>
-        <li>Drills / Drivers</li>
-        <li>Hand Saws</li>
-        <li>Files</li>
-        <li>Measuring Tools</li>
-        <li>Other Hand Tools</li>
-        <li>So much more!</li>
+      <ul class="horizontal-list">
+        <li style="background-color: #cf42c1;">Table Saw</li>
+        <li style="background-color: #cf42c1;">Band Saw</li>
+        <li style="background-color: #cf42c1;">Drill Press</li>
+        <li style="background-color: #cf42c1;">Chop Saw</li>
+        <li style="background-color: #cf42c1;">Belt Sander</li>
+        <li style="background-color: #cf42c1;">Random Orbit Sander</li>
+        <li style="background-color: #cf42c1;">Palm Router</li>
+        <li style="background-color: #cf42c1;">Drills / Drivers</li>
+        <li style="background-color: #cf42c1;">Hand Saws</li>
+        <li style="background-color: #cf42c1;">Files</li>
+        <li style="background-color: #cf42c1;">Measuring Tools</li>
+        <li style="background-color: #cf42c1;">Other Hand Tools</li>
+        <li style="background-color: #cf42c1;">So much more!</li>
       </ul>
     </section>
     <section>
@@ -99,10 +99,33 @@
         <li>Multiple violations of wood shop policy, by one or more individuals, will result in reduced access for everyone including locking out machines or the entire space when staff are not available.</li>
       </ul>
     </section>
-    <section>
-      <h2>Materials</h2>
-      <p>Make sure to reference the <a href="index.html#materials">materials policy</a>.</p>
-    </section>
+<section>
+  <h2>Materials</h2>
+  <p>
+    Make sure to reference the
+    <button type="button" popovertarget="materials">
+      materials policy
+    </button>.
+  </p>
+</section>
+
+<aside id="materials" popover aria-labelledby="materials-title">
+  <h2 id="materials-title">Materials Policy</h2>
+
+  <p>
+    <strong>BTU LAB IS NOT A FREE SUPPLY STORE.</strong>
+    But there are many ways to barter, including displaying your
+    work in BTU, tagging us in social media, offering workshops,
+    volunteering to organize supplies, and more. If you need
+    something, we ask that you give something in return.
+  </p>
+
+  <button type="button"
+          popovertarget="materials"
+          popovertargetaction="hide">
+    Close
+  </button>
+</aside>
   </main>
 
   <footer>

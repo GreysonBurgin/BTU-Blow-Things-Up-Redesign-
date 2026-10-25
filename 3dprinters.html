@@ -51,7 +51,7 @@
     <div class="page-hero dark" style="background-image: url('images/3dprinters.jpg');">
       <h1>3D Printers</h1>
     </div>
-    <p>3D Printing equipment and materials are labeled PURPLE.</p>
+    <h1 style="color: #800080;">3D Printing equipment and materials are labeled PURPLE.</h1>
     <p><strong>FACULTY:</strong> Class assignments requiring 3D printing should be coordinated by LAs, TAs, or instructors. (Questions: <a href="mailto:zack.weaver@colorado.edu">zack.weaver@colorado.edu</a>)</p>
     <p><strong>STUDENTS:</strong> Assistance with 3D Printing for class assignments should be coordinated with class LAs or TAs first, then "BTU Mischief Makers", if available.</p>
     <p><strong>EVERYBODY:</strong> 3D printing hardware/software update frequently! Make sure you stay up to date, too.</p>
@@ -86,10 +86,33 @@
         <li><strong>Additional materials allowed only with staff approval.</strong></li>
       </ul>
     </section>
-    <section>
-      <h2>Materials</h2>
-      <p>Make sure to reference the <a href="index.html#materials">materials policy</a>.</p>
-    </section>
+<section>
+  <h2>Materials</h2>
+  <p>
+    Make sure to reference the
+    <button type="button" popovertarget="materials">
+      materials policy
+    </button>.
+  </p>
+</section>
+
+<aside id="materials" popover aria-labelledby="materials-title">
+  <h2 id="materials-title">Materials Policy</h2>
+
+  <p>
+    <strong>BTU LAB IS NOT A FREE SUPPLY STORE.</strong>
+    But there are many ways to barter, including displaying your
+    work in BTU, tagging us in social media, offering workshops,
+    volunteering to organize supplies, and more. If you need
+    something, we ask that you give something in return.
+  </p>
+
+  <button type="button"
+          popovertarget="materials"
+          popovertargetaction="hide">
+    Close
+  </button>
+</aside>
   </main>
 
   <footer>

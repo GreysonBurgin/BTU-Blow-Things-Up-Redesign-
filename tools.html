@@ -51,8 +51,8 @@
     <div class="page-hero" style="background-image: url('images/tools.jpg');">
       <h1>Tools</h1>
     </div>
-    <p>General Tools equipment and materials are labeled <span class="tools-green">GREEN</span>.</p>
-    <p>Power tools, mostly used in the Wood Shop, are more like... <span class="tools-green">GREEEEN!</span></p>
+    <h1 style="color:green">General Tools equipment and materials are labeled GREEN.</h1>
+    <h1 style="color:green">Power tools, mostly used in the Wood Shop, are more like... GREEEEN!</h1>
     <section class="background-section">
       <h2>General Tools &amp; Materials</h2>
       <p>BTU Lab keeps lots of general tools on hand for all your inventing needs.</p>
@@ -84,11 +84,34 @@
         <li>And more!</li>
       </ul>
     </section>
-    <section>
-      <img class="feature-image" src="images/drill-rack.jpg" alt="Drill rack">
-      <h2>Materials</h2>
-      <p>Make sure to reference the <a href="index.html#materials">materials policy</a>.</p>
-    </section>
+<section>
+  <img class="feature-image" src="images/drill-rack.jpg" alt="Drill rack">
+  <h2>Materials</h2>
+  <p>
+    Make sure to reference the
+    <button type="button" popovertarget="materials">
+      materials policy
+    </button>.
+  </p>
+</section>
+
+<aside id="materials" popover aria-labelledby="materials-title">
+  <h2 id="materials-title">Materials Policy</h2>
+
+  <p>
+    <strong>BTU LAB IS NOT A FREE SUPPLY STORE.</strong>
+    But there are many ways to barter, including displaying your
+    work in BTU, tagging us in social media, offering workshops,
+    volunteering to organize supplies, and more. If you need
+    something, we ask that you give something in return.
+  </p>
+
+  <button type="button"
+          popovertarget="materials"
+          popovertargetaction="hide">
+    Close
+  </button>
+</aside>
   </main>
 
   <footer>

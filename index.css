@@ -407,3 +407,72 @@ footer {
     font-size: 1rem;
   }
 }
+
+.horizontal-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.horizontal-list > li {
+  padding: 0.75rem 1rem;
+  background: #D90429;
+  color: #FFFBFA;
+  border-radius: 6px;
+}
+
+/* Style the opening button like a link */
+button[popovertarget="materials"]:not([popovertargetaction]) {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #D90429;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Popup box */
+#materials {
+  box-sizing: border-box;
+  width: min(90%, 600px);
+  max-height: 85vh;
+  overflow-y: auto;
+  margin: auto;
+  padding: 2rem;
+  border: 2px solid #D90429;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #D90429;
+  font-family: Arial, sans-serif;
+}
+
+#materials::backdrop {
+  background: rgb(0 0 0 / 70%);
+}
+
+#materials h2 {
+  margin-top: 0;
+}
+
+#materials p {
+  line-height: 1.6;
+}
+
+#materials button {
+  padding: 0.6rem 1rem;
+  border: 1px solid #D90429;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+button[popovertarget="materials"]:focus-visible {
+  outline: 2px solid #D90429;
+  outline-offset: 4px;
+}
